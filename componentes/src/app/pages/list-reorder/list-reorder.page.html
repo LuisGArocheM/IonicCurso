@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      
+        <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+      
+    </ion-buttons>
+    <ion-title color="primary">List - Reorder</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="reorder= !reorder">
+        
+        toggle
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+  
+    <ion-reorder-group [disabled]="reorder"
+        (ionItemReorder)="doReorder($event)"  >
+      <ion-item *ngFor="let item of personajes">
+        <ion-label>{{item}}</ion-label>
+       
+      
+          <ion-reorder slot="end">
+            <ion-icon slot="" name="pizza"></ion-icon>
+          </ion-reorder>
+        
+      
+      
+      </ion-item>
+    </ion-reorder-group>
+
+    
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,21 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>alert</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<app-header titulo="Alert"></app-header>
+
+<ion-content class="ion-padding">
+   <ion-button (click)="OnClick()">
+     Alert
+   </ion-button>
+   <ion-button (click)=" presentAlertMultipleButtons()">
+     Second Alert
+   </ion-button>
+   <ion-button (click)="presentAlertPrompt()">
+     Alert Promt
+   </ion-button>
+</ion-content>
