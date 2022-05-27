@@ -1,0 +1,33 @@
+<ion-header [translucent]="true" mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Luis News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" mode="ios" class="ion-no-border">
+    <ion-toolbar>
+      <ion-title size="large">Luis News</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+
+  <ion-infinite-scroll threshold="25%" 
+  [disabled]="true" 
+  position="bottom" (ionInfinite)="loadData()">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+<app-articles
+[articles]="articles"></app-articles>
+
+
+  
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+</ion-content>
