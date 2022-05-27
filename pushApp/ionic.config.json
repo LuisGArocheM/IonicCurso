@@ -1,0 +1,8 @@
+{
+  "name": "pushApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
