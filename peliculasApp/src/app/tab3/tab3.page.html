@@ -1,0 +1,27 @@
+
+
+<ion-content [fullscreen]="true">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>Favoritos</h3>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+
+  <div *ngFor="let pelicula of favGenero">
+    <ion-grid *ngIf="pelicula.pelis > 0">
+      <ion-row>
+        <ion-col size="6">
+          <h4>{{pelicula.genero}}</h4>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+      <app-slideshow-poster [peliculas]="pelicula.pelis"></app-slideshow-poster>
+
+  </div>
+    
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
+</ion-content>
